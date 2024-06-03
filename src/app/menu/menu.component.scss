@@ -22,6 +22,11 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr );
         color: white;
+        .selected{
+            background-color: #E4737D;
+            color:#444655 ;
+            border-bottom: 1px solid  #444655;
+        }
         .option{
             height: 100%;
             width: 100%;

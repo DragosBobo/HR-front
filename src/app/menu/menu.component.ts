@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-menu',
@@ -8,11 +9,13 @@ import { Component } from '@angular/core';
 export class MenuComponent {
   isScaled = false;
   isLoading = false;
-  
-  onButtonClick() {
-    this.isScaled = !this.isScaled;
-    
-    setTimeout((()=>this.isLoading = !this.isLoading),400);
-    setTimeout(()=>{},1000);
+  selectedSubject :Subject<number> = new Subject();
+  selected : number = 1;
+ constructor(){
+  this.selectedSubject.subscribe(x=>{this.selected=x;console.log(this.selected)});
+ }
+  selectMenu(value:number){
+    this.selectedSubject.next(value);
   }
+
 }
