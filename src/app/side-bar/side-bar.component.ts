@@ -11,10 +11,10 @@ import { Router } from '@angular/router';
 export class SideBarComponent {
 
   links:MenuLink[] = [];
-  selected:number = 0;
+  selected:number = -1;
   selectedSubject :Subject<number> = new Subject();
   constructor(sidebarService:SideBarService , private router:Router){
-    sidebarService.getLinks().subscribe((val:MenuLink[])=>{this.links =val;this.selected=1;
+    sidebarService.getLinks().subscribe((val:MenuLink[])=>{this.links =val;
     });
     this.selectedSubject.subscribe(x=>{this.selected=x;});
   }

@@ -1,3 +1,5 @@
+
+@import "../common.scss";
 .container{
     height: 100%;
     width: 100%;
@@ -19,17 +21,16 @@
     .options{
         grid-column: 3/12;
         display: flex;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr );
+      
         color: white;
         .selected{
-            background-color: #E4737D;
+            background-color: $secondary-color;
             color:#444655 ;
-            border-bottom: 1px solid  #444655;
+            border-bottom: 1px solid  $primary-color;
         }
         .option{
             height: 100%;
-            width: 100%;
+            width: 300px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -38,23 +39,9 @@
             transition: all 1s ease;
         }
         .option:hover{
-            background-color: #E4737D;
+            background-color: $secondary-color;
             color:#444655 ;
         }
-        .option-1{
-            border-right: 0.2px dashed  white;
-
-            
-        }
-        .option-2{
-
-            border-right: 0.2px dashed  white;
-
-        }
-        .option-3{
-            border-right: 0.2px dashed  white;
-
-
-        }
+      
     }
 }

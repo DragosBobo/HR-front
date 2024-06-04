@@ -4,17 +4,13 @@
     HRCloud
   </div>
   <div class="options">
-    <div class="option-1 option" (click)="selectMenu(1)" [ngClass]="{'selected':selected==1}" >
-      <mat-icon>supervisor_account</mat-icon>  Administrare Personal
+    @for(item of MenuLinks;track item.id){
+    <div class="option" (click)="selectMenu(item.id,item.url)"  [ngClass]="{'selected':selected==item.id}">
+      <mat-icon>supervisor_account</mat-icon> {{item.text}}
     </div>
-    <div class="option-2 option"  (click)="selectMenu(2)" [ngClass]="{'selected':selected==2}">
-      <mat-icon>timeline</mat-icon> Rapoarte
-    </div>
-    <div class="option-3 option"  (click)="selectMenu(3)" [ngClass]="{'selected':selected==3}">
-      <mat-icon>access_time</mat-icon>  Pontaj
-    </div>
-    <div class="option-4 option"  (click)="selectMenu(4)" [ngClass]="{'selected':selected==4}">
-      <mat-icon>library_books</mat-icon> Fisiere
-    </div>
+      
+    }
+  
+    
   </div>
 </div>

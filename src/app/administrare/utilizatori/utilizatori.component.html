@@ -1,0 +1,63 @@
+<div class="container">
+   
+    <div class="content item">
+        <div class="title">
+           Lista Utilizatorilor
+        </div>
+        <div class="table">
+            <div class="table">
+                <table mat-table [dataSource]="datasource" class="mat-elevation-z8">
+    
+                   
+                    <ng-container matColumnDef="position">
+                      <th mat-header-cell *matHeaderCellDef> No. </th>
+                      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="name">
+                      <th mat-header-cell *matHeaderCellDef> Name </th>
+                      <td mat-cell *matCellDef="let element"> {{element.nume}} </td>
+                    </ng-container>
+                 
+                    <ng-container matColumnDef="surname">
+                      <th mat-header-cell *matHeaderCellDef> Numar Angajati </th>
+                      <td mat-cell *matCellDef="let element"> {{element.prenume}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="location">
+                      <th mat-header-cell *matHeaderCellDef> Locatie </th>
+                      <td mat-cell *matCellDef="let element"> {{element.locatia}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef> Functia  </th>
+                        <td mat-cell *matCellDef="let element">{{element.functia}} </td>
+                      </ng-container>
+                      <ng-container matColumnDef="firm">
+                        <th mat-header-cell *matHeaderCellDef> Angajat la  </th>
+                        <td mat-cell *matCellDef="let element">{{element.firmaAsociata}} </td>
+                      </ng-container>
+                      <ng-container matColumnDef="edit">
+                        <th mat-header-cell *matHeaderCellDef>   </th>
+                        <td mat-cell *matCellDef="let element" class="option"> 
+                            <mat-icon>edit</mat-icon>
+                        </td>
+                      </ng-container>
+                      <ng-container matColumnDef="delete">
+                        <th mat-header-cell *matHeaderCellDef>   </th>
+                        <td mat-cell *matCellDef="let element" class="option"> 
+                            <mat-icon>delete</mat-icon>
+                        </td>
+                      </ng-container>
+                      <ng-container matColumnDef="details">
+                        <th mat-header-cell *matHeaderCellDef>   </th>
+                        <td mat-cell *matCellDef="let element" class="option"> 
+                            <mat-icon>remove_red_eye</mat-icon>
+                        </td>
+                      </ng-container>
+                  
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+        </div>
+    </div>
+</div>

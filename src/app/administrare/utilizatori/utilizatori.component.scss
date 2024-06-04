@@ -1,0 +1,38 @@
+
+.container{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.1fr repeat(12,1fr) 0.1fr;
+    .item{
+        background-color: #444655;
+        border-radius: 5px;
+    }
+   
+    .content{
+        grid-row: 2/13;
+        grid-column: 2;
+        grid-template-columns: 0.1fr repeat(6,1fr) 0.1fr;
+        grid-template-rows: repeat(30,1fr);
+        display: grid;
+    }
+    .title{
+        color: white;
+        grid-row: 2;
+        grid-column: 2/8;
+        border-bottom: 1px solid white;
+    }
+    .table{
+        overflow-y: scroll;
+        grid-row: 4/29;
+        grid-column: 2/8;
+        background-color: rgba(93, 94, 99, 0.322)
+
+    }
+    .table::-webkit-scrollbar {
+        
+        display: none;
+      }
+      
+}
