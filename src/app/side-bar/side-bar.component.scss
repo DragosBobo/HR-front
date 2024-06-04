@@ -48,7 +48,7 @@
             align-items: center;
             gap: 2px;
             .selected{
-                background-color: #E4737D;
+                background-color:  rgb(102, 153, 212);
                 color:#444655 ;
                 border-bottom: 1px solid  #444655;
             }
@@ -68,7 +68,7 @@
             }
            
             .option:hover{
-                background-color: #E4737D;
+                background-color: rgb(102, 153, 212);
                 color:#444655 ;
             }
         }

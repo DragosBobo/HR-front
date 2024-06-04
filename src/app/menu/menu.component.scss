@@ -24,7 +24,7 @@
       
         color: white;
         .selected{
-            background-color: $secondary-color;
+            background-color:  rgb(102, 153, 212);
             color:#444655 ;
             border-bottom: 1px solid  $primary-color;
         }
@@ -39,7 +39,7 @@
             transition: all 1s ease;
         }
         .option:hover{
-            background-color: $secondary-color;
+            background-color:  rgb(102, 153, 212);
             color:#444655 ;
         }
       
