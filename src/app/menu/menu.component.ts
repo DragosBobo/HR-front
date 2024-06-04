@@ -24,10 +24,11 @@ export class MenuComponent {
   
 
   //populate menu main 
-  this.MenuLinks.push({url:'secured/administrare',text:'Administrare',icon:'',id:1})
-  this.MenuLinks.push({url:'secured/rapoarte',text:'Rapoarte',icon:'',id:2})
-  this.MenuLinks.push({url:'secured/fisiere',text:'Fisiere',icon:'',id:3})
-
+  this.MenuLinks.push({url:'secured/administrare',text:'Administrare',icon:'supervisor_account',id:1})
+  this.MenuLinks.push({url:'secured/rapoarte',text:'Rapoarte',icon:'signal_cellular_alt',id:2})
+  this.MenuLinks.push({url:'secured/fisiere',text:'Fisiere',icon:'file_copy ',id:3})
+  this.MenuLinks.push({url:'secured/angajati',text:'Angajati',icon:'assignment_ind',id:4})
+    
 }
   selectMenu(value:number,url:string){
     this.selectedSubject.next(value);
@@ -41,8 +42,24 @@ export class MenuComponent {
       }
       case 2 : {
         this.links.push({url:'secured/raportare/test',text:'Rapoarte test',icon:'',id:1});
-        this.links.push({url:'',text:'Rapoarte test',icon:'',id:2});
+        this.links.push({url:'secured/raportare/test',text:'Rapoarte test',icon:'',id:2});
         break;
+      }
+      case 3:{
+        this.links.push({url:'secured/fisiere/istoric-acte',text:'Istoric',icon:'',id:1});
+        this.links.push({url:'secured/fisiere/fise-de-post',text:'Fise de post',icon:'',id:2});
+        this.links.push({url:'secured/fisiere/cv',text:'CV-uri',icon:'',id:3});
+        
+        break;
+
+      }
+      case 4:{
+        this.links.push({url:'secured/angajati/lista-angajati',text:'Lista angajati ',icon:'',id:1});
+        this.links.push({url:'secured/angajati/evolutie',text:'Evolutie ',icon:'',id:2});
+        this.links.push({url:'secured/angajati/cv',text:'CV-uri',icon:'',id:3});
+        
+        break;
+
       }
      }
      this.sidebar.addLinks(this.links);

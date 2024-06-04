@@ -18,6 +18,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FirmaFilterComponent } from './administrare/fima/firma-filter/firma-filter.component';
 import { SecuredComponent } from './secured/secured.component';
+import { CloudsComponent } from './login/clouds/clouds.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { SecuredComponent } from './secured/secured.component';
     UtilizatoriComponent,
     FimaComponent,
     FirmaFilterComponent,
-    SecuredComponent
+    SecuredComponent,
+    CloudsComponent
   ],
   imports: [
     MatInputModule,

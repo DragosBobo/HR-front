@@ -1,4 +1,4 @@
-
+@import "../../common.scss";
 .container{
     display: grid;
     height: 100%;
@@ -27,7 +27,33 @@
         overflow-y: scroll;
         grid-row: 4/29;
         grid-column: 2/8;
-        background-color: rgba(93, 94, 99, 0.322)
+        background-color: rgba(93, 94, 99, 0.322);
+        .table{
+            overflow-y: scroll;
+            grid-row: 4/29;
+            grid-column: 2/8;
+            background-color: rgba(93, 94, 99, 0.322);
+            table{
+                background-color: $primary-color;
+                th{
+                    color: white;
+                }
+                td{
+                    color: white;
+    
+                }
+                .option{
+                    cursor: pointer;
+                    width: 50px;
+                    height: 100%;
+                   
+                    
+                  }
+                  .option:hover{
+                        color: $secondary-color;
+                  }
+            }}
+           
 
     }
     .table::-webkit-scrollbar {

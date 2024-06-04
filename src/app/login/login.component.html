@@ -1,1 +1,21 @@
-works
+
+<div class="container">
+    <div class="cloud" *ngFor="let cloud of clouds"
+     [ngStyle]="{'top': cloud.top, 'left': cloud.left, 'animation-duration': cloud.animationDuration, 'animation-delay': cloud.animationDelay, 'z-index': cloud.zIndex , 'height':cloud.height,'widht':cloud.lenght}">
+     <mat-icon>cloud_queue</mat-icon>
+
+    </div>
+
+    <div class="form-container">
+        <div class="logo">
+            <mat-icon>cloud_queue</mat-icon>
+            HRCloud
+          </div>
+            <div class="button" (click)="login()">
+                Login
+            </div>
+            <div class="register">
+                <span>Register</span>
+            </div>
+    </div>
+</div>

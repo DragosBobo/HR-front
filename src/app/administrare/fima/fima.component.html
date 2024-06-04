@@ -1,9 +1,7 @@
 <div class="container">
     <div class="filter item">
-        <mat-form-field>
-            <mat-label>Cauta</mat-label>
-            <input matInput (keyup)="applyFilter($event)" placeholder="Cauta dupa denumire" #input>
-          </mat-form-field>
+        <input type="text" placeholder="cauta" (keyup)="applyFilter($event)">
+       
     </div>
     <div class="content item">
         <div class="title">

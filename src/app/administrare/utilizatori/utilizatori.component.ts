@@ -10,7 +10,7 @@ import { UserDatasource } from './utilizator.datasource';
   styleUrl: './utilizatori.component.scss'
 })
 export class UtilizatoriComponent {
-  displayedColumns: string[] = ['position', 'name', 'employees', 'location','validUntil', 'surname', 'location','firm','edit','details','delete'];
+  displayedColumns: string[] = ['id','position' ,'name', 'location', 'surname', 'location','firm','edit','details','delete'];
   datasource :MatTableDataSource<IUser> ;
   
   firmaDatasource :UserDatasource = new UserDatasource;

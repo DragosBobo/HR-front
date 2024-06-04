@@ -6,7 +6,7 @@
   <div class="options">
     @for(item of MenuLinks;track item.id){
     <div class="option" (click)="selectMenu(item.id,item.url)"  [ngClass]="{'selected':selected==item.id}">
-      <mat-icon>supervisor_account</mat-icon> {{item.text}}
+      <mat-icon>{{item.icon}}</mat-icon> {{item.text}}
     </div>
       
     }
