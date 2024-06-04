@@ -1,0 +1,76 @@
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.02fr 0.2fr 1fr;
+    .item{
+        grid-column: 2;
+    }
+    .top{
+        grid-row: 2;
+        border-bottom: 1px solid white;
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.1fr ;
+        grid-template-rows: 0.02fr 1fr 0.3fr;
+        .image-container{
+            border-bottom: 1px solid white;
+            grid-row: 2;
+            grid-column: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            mat-icon{
+              scale: 4;
+              color: white;
+            }
+        }
+        .title{
+            grid-row: 3;
+            grid-column: 2;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .options-container{
+        grid-row: 3;
+        display: grid;
+        grid-template-rows: 0.1fr 1fr 0.1fr;
+        .options{
+            grid-row: 2;
+            border-bottom: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            .selected{
+                background-color: #E4737D;
+                color:#444655 ;
+                border-bottom: 1px solid  #444655;
+            }
+            .option{
+                font-size: smaller;
+                height: 50px;
+                width: 100%;
+                border: 1px solid white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                border-radius: 2px;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 1s ease;
+            }
+           
+            .option:hover{
+                background-color: #E4737D;
+                color:#444655 ;
+            }
+        }
+    }
+}

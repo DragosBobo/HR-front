@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="top item "> 
+        <div class="image-container">
+            <mat-icon>account_circle</mat-icon>
+        </div>
+        <div class="title">
+            Administrator
+        </div>
+    </div>
+    <div class="options-container item">
+<div class="options">
+   
+    @for(item of links;track item.id){
+        <div class="option" 
+        (click)="selectMenu(item.id,item.url)"
+        [ngClass]="{'selected':item.id==selected}">{{item.text}}</div>
+    }
+</div>
+
+    </div>
+</div>
