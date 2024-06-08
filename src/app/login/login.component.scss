@@ -7,7 +7,7 @@
     grid-template-columns:0.1fr repeat(10,1fr) 0.1fr;
     grid-template-rows: repeat(50,1fr);
     overflow: hidden;
-    background-image:url("../../assets/back8.jpg") ;
+    background-image:url("../../assets/back12.jpg") ;
     background-position: center;
     background-size: cover;
     .cloud{
@@ -19,6 +19,21 @@
     }
     .form-container{
         backdrop-filter: blur(5px);
+        .fields{
+            grid-row: 5/10;
+            grid-column: 2;
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: repeat(10,1fr);
+            .username{
+                grid-column: 3/11;
+                grid-row:  1/4;
+            }
+            .password{
+                grid-column: 3/11;
+                grid-row:6/9 ;
+            }
+        }
         .logo{
             grid-row: 2/4;
             grid-column: 2;

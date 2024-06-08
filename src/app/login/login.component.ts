@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 interface Cloud {
@@ -23,7 +24,7 @@ isLoggedIn :boolean = false;
 clouds: Cloud[] = [];
 items: string[] = ['Management','System','Unity','Products'];
   constructor(private router:Router) { }
-
+  emailFormControl = new FormControl('', [Validators.required]);
   ngOnInit(): void {
     this.generateClouds(4);
   }

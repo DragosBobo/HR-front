@@ -1,15 +1,36 @@
 
 <div class="container">
-    <div class="cloud" *ngFor="let cloud of clouds"
+    <!-- <div class="cloud" *ngFor="let cloud of clouds"
      [ngStyle]="{'top': cloud.top, 'left': cloud.left, 'animation-duration': cloud.animationDuration, 'animation-delay': cloud.animationDelay, 'z-index': cloud.zIndex , 'height':cloud.height,'widht':cloud.lenght}">
      <mat-icon>cloud_queue</mat-icon>
      <span>{{items[cloud.id]}}</span>
-    </div>
+    </div> -->
 
     <div class="form-container">
         <div class="logo">
             <mat-icon>cloud_queue</mat-icon>
             HRCloud
+          </div>
+          <div class="fields">
+            <div class="username"> 
+                <form class="UsernameForm">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Username</mat-label>
+                      <input type="text" matInput  
+                             placeholder="Ex. pat@example.com">
+                    </mat-form-field>
+                  </form>
+            </div>
+            <div class="password">
+                <label for="password">password</label>
+                <form class="passwordForm">
+                    <mat-form-field class="example-full-width">
+                      <mat-label>password</mat-label>
+                      <input type="password" matInput  
+                             placeholder="*******">
+                    </mat-form-field>
+                  </form>
+            </div>
           </div>
             <div class="button" (click)="login()">
                 Login

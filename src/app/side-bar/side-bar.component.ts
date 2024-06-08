@@ -15,6 +15,7 @@ export class SideBarComponent {
   selectedSubject :Subject<number> = new Subject();
   constructor(sidebarService:SideBarService , private router:Router){
     sidebarService.getLinks().subscribe((val:MenuLink[])=>{this.links =val;
+      this.selected = -1;
     });
     this.selectedSubject.subscribe(x=>{this.selected=x;});
   }

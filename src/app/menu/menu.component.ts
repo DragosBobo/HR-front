@@ -13,7 +13,7 @@ export class MenuComponent {
   isScaled = false;
   isLoading = false;
   selectedSubject :Subject<number> = new Subject();
-  selected : number = 0;
+  selected : number = -1;
   links : MenuLink[] = [];
   link :MenuLink = {url:'',text:'',icon:'',id:1};
   private sidebar: SideBarService;
@@ -25,7 +25,7 @@ export class MenuComponent {
 
   //populate menu main 
   this.MenuLinks.push({url:'secured/administrare',text:'Administrare',icon:'supervisor_account',id:1})
-  this.MenuLinks.push({url:'secured/rapoarte',text:'Rapoarte',icon:'signal_cellular_alt',id:2})
+  this.MenuLinks.push({url:'secured/raportare',text:'Rapoarte',icon:'signal_cellular_alt',id:2})
   this.MenuLinks.push({url:'secured/fisiere',text:'Fisiere',icon:'file_copy ',id:3})
   this.MenuLinks.push({url:'secured/angajati',text:'Angajati',icon:'assignment_ind',id:4})
     

@@ -47,11 +47,7 @@
             flex-direction: column;
             align-items: center;
             gap: 2px;
-            .selected{
-                background-color:  rgb(102, 153, 212);
-                color:#444655 ;
-                border-bottom: 1px solid  #444655;
-            }
+          
             .option{
                 font-size: smaller;
                 height: 50px;
@@ -70,6 +66,11 @@
             .option:hover{
                 background-color: rgb(102, 153, 212);
                 color:#444655 ;
+            }
+            .selected{
+                background-color:  rgb(102, 153, 212);
+                color:#444655 ;
+                border-bottom: 1px solid  #444655;
             }
         }
     }
